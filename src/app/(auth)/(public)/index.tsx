@@ -1,16 +1,20 @@
-import { useAuth } from "@clerk/clerk-expo";
+import { useAuth, useUser } from "@clerk/clerk-expo";
 import { Text, View } from "react-native";
 
-import { Button } from "@/components/Button";
+import { ButtonOut } from "@/components/ButtonOut";
 
 import { styles } from "./styles";
 
 export default function Home() {
-    const { signOut } = useAuth()
+    const { user } = useUser();
+    const { signOut } = useAuth();
+
     return (
         <View style={styles.container}>
-            <Text style={styles.text}>Stone user</Text>
-            <Button icon="exit" title="Sair" onPress={() => signOut()} />
+            <View style={styles.header}>
+                <Text style={styles.text}>Produtos Stone</Text>
+                <ButtonOut icon="exit" onPress={() => signOut()} />
+            </View>
         </View>
     )
 }
