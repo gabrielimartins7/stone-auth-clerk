@@ -3,7 +3,8 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#F2F2F2"
+        backgroundColor: "#F2F2F2",
+        
     },
     header: {
         gap: 12,
@@ -20,5 +21,17 @@ export const styles = StyleSheet.create({
         fontWeight: "bold",
         marginTop: 14,
         color: "#FFFFFF"
+    },
+    containerScroll: {
+        backgroundColor: "#ffff",
+        padding: 14
+    },
+    products: {
+        color: "#000000",
+        fontSize: 16,
+        fontWeight: "semibold"
+    },
+    carousel: {
+        height: "50%"
     }
 })
